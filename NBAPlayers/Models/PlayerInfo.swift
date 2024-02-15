@@ -7,18 +7,22 @@
 
 import Foundation
 
+struct PlayerInfo: Decodable {
+    let data: [Player]
+}
+
 struct Player: Decodable {
-    let first_name: String
-    let last_name: String
+    let firstName: String
+    let lastName: String
     let team: Team
+    
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
 }
 
 struct Team: Decodable {
     let city: String
     let conference: String
-    let full_name: String
-}
-
-struct PlayerInfo: Decodable {
-    let data: [Player]
+    let fullName: String
 }
