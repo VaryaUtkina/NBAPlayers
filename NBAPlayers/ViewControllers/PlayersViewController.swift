@@ -19,6 +19,11 @@ final class PlayersViewController: UITableViewController {
         fetchPlayers()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let playerVC = segue.destination as? TestTableViewController else { return }
+        playerVC.player = sender as? Player
+    }
+    
     private func fetchPlayers() {
         networkManager.fetchPlayers(from: "https://www.balldontlie.io/api/v1/players") { [weak self] result in
             guard let self else { return }
@@ -47,5 +52,13 @@ extension PlayersViewController {
         let player = players[indexPath.row]
         cell.configure(with: player)
         return cell
+    }
+}
+
+// MARK: - TableViewDelegate
+extension PlayersViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let player = players[indexPath.row]
+        performSegue(withIdentifier: "showP", sender: player)
     }
 }

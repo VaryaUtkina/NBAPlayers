@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48B1384E2B7E8FF80004CFBF /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1384D2B7E8FF80004CFBF /* TestTableViewController.swift */; };
 		48B980E92B7E5745008B73F6 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980E82B7E5745008B73F6 /* PlayerCell.swift */; };
 		48B980EC2B7E64BF008B73F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980EB2B7E64BF008B73F6 /* NetworkManager.swift */; };
+		48B980EF2B7E79B4008B73F6 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980EE2B7E79B4008B73F6 /* PlayerDetailsViewController.swift */; };
+		48B980F12B7E84A3008B73F6 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980F02B7E84A3008B73F6 /* TeamCell.swift */; };
 		48E077632B6958EA005DBC29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E077622B6958EA005DBC29 /* AppDelegate.swift */; };
 		48E077652B6958EA005DBC29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E077642B6958EA005DBC29 /* SceneDelegate.swift */; };
 		48E077672B6958EA005DBC29 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E077662B6958EA005DBC29 /* PlayersViewController.swift */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48B1384D2B7E8FF80004CFBF /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		48B980E82B7E5745008B73F6 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		48B980EB2B7E64BF008B73F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		48B980EE2B7E79B4008B73F6 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		48B980F02B7E84A3008B73F6 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		48E0775F2B6958EA005DBC29 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E077622B6958EA005DBC29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E077642B6958EA005DBC29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				48B980E82B7E5745008B73F6 /* PlayerCell.swift */,
+				48B980F02B7E84A3008B73F6 /* TeamCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				48E077662B6958EA005DBC29 /* PlayersViewController.swift */,
+				48B980EE2B7E79B4008B73F6 /* PlayerDetailsViewController.swift */,
+				48B1384D2B7E8FF80004CFBF /* TestTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,9 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B980F12B7E84A3008B73F6 /* TeamCell.swift in Sources */,
 				48B980EC2B7E64BF008B73F6 /* NetworkManager.swift in Sources */,
 				48E077772B695A2D005DBC29 /* PlayerInfo.swift in Sources */,
 				48E077672B6958EA005DBC29 /* PlayersViewController.swift in Sources */,
+				48B980EF2B7E79B4008B73F6 /* PlayerDetailsViewController.swift in Sources */,
+				48B1384E2B7E8FF80004CFBF /* TestTableViewController.swift in Sources */,
 				48E077632B6958EA005DBC29 /* AppDelegate.swift in Sources */,
 				48E077652B6958EA005DBC29 /* SceneDelegate.swift in Sources */,
 				48B980E92B7E5745008B73F6 /* PlayerCell.swift in Sources */,
