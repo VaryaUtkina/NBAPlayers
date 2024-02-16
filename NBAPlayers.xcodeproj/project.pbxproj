@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48B1384E2B7E8FF80004CFBF /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1384D2B7E8FF80004CFBF /* TestTableViewController.swift */; };
+		48218E152B7FBE8D00FCC446 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48218E142B7FBE8D00FCC446 /* TeamViewController.swift */; };
 		48B980E92B7E5745008B73F6 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980E82B7E5745008B73F6 /* PlayerCell.swift */; };
 		48B980EC2B7E64BF008B73F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980EB2B7E64BF008B73F6 /* NetworkManager.swift */; };
 		48B980EF2B7E79B4008B73F6 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B980EE2B7E79B4008B73F6 /* PlayerDetailsViewController.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		48B1384D2B7E8FF80004CFBF /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		48218E142B7FBE8D00FCC446 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		48B980E82B7E5745008B73F6 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		48B980EB2B7E64BF008B73F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		48B980EE2B7E79B4008B73F6 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			children = (
 				48E077662B6958EA005DBC29 /* PlayersViewController.swift */,
 				48B980EE2B7E79B4008B73F6 /* PlayerDetailsViewController.swift */,
-				48B1384D2B7E8FF80004CFBF /* TestTableViewController.swift */,
+				48218E142B7FBE8D00FCC446 /* TeamViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -209,9 +209,9 @@
 				48E077772B695A2D005DBC29 /* PlayerInfo.swift in Sources */,
 				48E077672B6958EA005DBC29 /* PlayersViewController.swift in Sources */,
 				48B980EF2B7E79B4008B73F6 /* PlayerDetailsViewController.swift in Sources */,
-				48B1384E2B7E8FF80004CFBF /* TestTableViewController.swift in Sources */,
 				48E077632B6958EA005DBC29 /* AppDelegate.swift in Sources */,
 				48E077652B6958EA005DBC29 /* SceneDelegate.swift in Sources */,
+				48218E152B7FBE8D00FCC446 /* TeamViewController.swift in Sources */,
 				48B980E92B7E5745008B73F6 /* PlayerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

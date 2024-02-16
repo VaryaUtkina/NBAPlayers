@@ -10,6 +10,8 @@ import UIKit
 final class PlayerDetailsViewController: UIViewController {
     
     @IBOutlet var playerImage: UIImageView!
+    @IBOutlet var teamImage: UIImageView!
+    @IBOutlet var teamLabel: UILabel!
     
     var players: [Player]!
     var selectedPlayer: Player!
@@ -18,20 +20,14 @@ final class PlayerDetailsViewController: UIViewController {
         super.viewDidLoad()
         title = selectedPlayer.fullName
         playerImage.image = UIImage(named: selectedPlayer.fullName) ?? UIImage.unknownPlayer
-        print(selectedPlayer.team.fullName)
+        teamImage.image = UIImage(named: selectedPlayer.team.fullName) ?? UIImage.basketball
+        teamLabel.text = selectedPlayer.team.fullName
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let teamVC = segue.destination as? TeamViewController else { return }
+        teamVC.players = players
+        teamVC.selectedPlayer = selectedPlayer
     }
 }
 
-// MARK: - TableViewDataSource
-extension PlayerDetailsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        guard let cell = cell as? TeamCell else { return UITableViewCell() }
-        cell.configure(with: selectedPlayer)
-        return cell
-    }
-}

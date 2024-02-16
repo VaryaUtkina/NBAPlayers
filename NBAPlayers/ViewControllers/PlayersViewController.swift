@@ -20,8 +20,9 @@ final class PlayersViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let playerVC = segue.destination as? TestTableViewController else { return }
-        playerVC.player = sender as? Player
+        guard let playerVC = segue.destination as? PlayerDetailsViewController else { return }
+        playerVC.selectedPlayer = sender as? Player
+        playerVC.players = players
     }
     
     private func fetchPlayers() {
@@ -59,6 +60,6 @@ extension PlayersViewController {
 extension PlayersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let player = players[indexPath.row]
-        performSegue(withIdentifier: "showP", sender: player)
+        performSegue(withIdentifier: "showPlayer", sender: player)
     }
 }
