@@ -26,15 +26,11 @@ final class PlayersViewController: UITableViewController {
     }
     
     private func fetchPlayers() {
-        networkManager.fetchPlayers(from: "https://www.balldontlie.io/api/v1/players") { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let players):
-                self.players = players
-                DispatchQueue.main.async { [unowned self] in
-                    self.tableView.reloadData()
-                }
-            case .failure(let error):
+        Task {
+            do {
+                players = try await networkManager.fetchPlayers().data
+                tableView.reloadData()
+            } catch {
                 print(error)
             }
         }

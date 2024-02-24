@@ -8,6 +8,7 @@
 import Foundation
 
 enum NetworkError: Error {
+    case invalidURL
     case noData
     case decodingError
 }
@@ -17,21 +18,19 @@ final class NetworkManager {
     
     private init() {}
     
-    func fetchPlayers(from urlString: String, completion: @escaping(Result<[Player], NetworkError>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: urlString)!) { data, _, error in
-            guard let data else {
-                print(error ?? "No error description")
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let players = try decoder.decode(PlayerInfo.self, from: data).data
-                completion(.success(players))
-            } catch {
-                completion(.failure(.decodingError))
-            }
-        }.resume()
+    func fetchPlayers() async throws -> PlayerInfo {
+        guard let url = URL(string: "https://www.balldontlie.io/api/v1/players") else {
+            throw NetworkError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        do {
+            return try decoder.decode(PlayerInfo.self, from: data)
+        } catch {
+            throw NetworkError.decodingError
+        }
     }
 }
